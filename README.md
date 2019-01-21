@@ -7,6 +7,7 @@
 
 * 測試程式碼如下：
 ```javascript=
+
 let fs=require('fs');
 
 let eventOutput=fs.readFileSync('eventOutput.txt','utf8'); 
@@ -22,16 +23,20 @@ for(let i = 0 ; i< eventData.length ; i++){
 				
 		if(eventSplitData[j] != sensorSplitData[j]){
 			if(j ==2 && eventSplitData[j] !=sensorSplitData[4]){
-				console.log(eventSplitData[j]+"\t"+sensorSplitData[4])
+				console.log(eventSplitData[j]+"\t"+sensorSplitData[4]);
+				errorLine+=`${i},i`;
 			}	
 			if(j ==3 && eventSplitData[j] !=sensorSplitData[5]){
-				console.log(eventSplitData[j]+"\t"+sensorSplitData[5])
+				console.log(eventSplitData[j]+"\t"+sensorSplitData[5]);
+				errorLine+=`${i},i`;
 			}
 			if(j ==4 && eventSplitData[j] !=sensorSplitData[2]){
-				console.log(eventSplitData[j]+"\t"+sensorSplitData[2])
+				console.log(eventSplitData[j]+"\t"+sensorSplitData[2]);
+				errorLine+=`${i},i`;
 			}
 			if(j ==5 && eventSplitData[j] !=sensorSplitData[3]){
-				console.log(eventSplitData[j]+"\t"+sensorSplitData[3])
+				console.log(eventSplitData[j]+"\t"+sensorSplitData[3]);
+				errorLine+=`${i},i`;
 			}
 		}
 	}
